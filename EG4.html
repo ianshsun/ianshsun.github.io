@@ -1,0 +1,207 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Home Battery Automation Project</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="index.html" class="logo">Home Battery Automation</a>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li><a href="index.html">Home</a></li>
+							<li><a href="education.html">Education</a></li>
+							<li class="active"><a href="engineering.html">Engineering</a></li>
+							<li><a href="woodworking.html">Woodworking</a></li>
+							<li><a href="IT.html">IT</a></li>
+							<li><a href="Repairstories.html">Repair stories</a></li>
+						</ul>
+						<ul class="icons">
+							<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<section class="post">
+								<header class="major">
+									<h1>What is a<br />
+									Home Battery?</h1>
+									<p>A home battery serves as backup power when the grid is down, or as energy storage when combined with solar. </p>
+								</header>
+								<div class="image main"><img src="images/istockphoto-1341414223-1024x1024.jpg" alt="30kWh battery install" /></div>
+									<p>
+										As energy prices soar due to demand, green energy transitions, and fuel price fluctuations, home owners are looking for ways to save on operating costs. One option is to install solar. However with grid-tied solar, should the grid ever go down, your home would also lose power. Additionally with new policies like NEM 3.0, the payback of exporting energy back to the grid is less incentivized. This project explores a battery energy storage system (BESS) as a way property owners can save on electric costs by load shifting their usage.
+									</p>
+									<p>
+										Solar battery systems have been sensationalized by companies like Tesla through their Powerwall products. These systems are often sold at a premium as everything from sizing to installation is packaged into one expensive bundle. Daredevil homeowners who are willing to put in the effort can DIY their own BESS install at the fraction of the price.
+									</p>
+								<hr>
+								<h2>
+									Time of use rate
+								</h2>
+									<p> 
+										The utility provider is Con Edison, which serves the NYC area. Per their standard rate plan as of March 2024, delivery is 14.116 cents/kWh. On the Time of Use rate, the schedule is split between summer and the rest of the year. Peak hours are from 8 am to midnight. During summer, super-peak pricing is on weekdays from 2-6pm where prices can skyrocket. Off-peak rates are set at 2.33 cents/kWh (formerly 1.80 cents/kWh in 2023). Peak rates are 33.05 cents/kWh during summer months and 12.23 cents/kWh in all other months. Note, the prices in the table below are subject to increase and may be higher in the bill as I've experienced. When you are on the time of use plan, you are also subjected to spikes in supply pricing in addition to delivery pricing. That could mean up to a dollar or more per kWh. You can read more from <a href="https://www.coned.com/en/accounts-billing/your-bill/time-of-use">their website.</a>
+									</p>
+								<div class="image main"><img src="images/coned march 2024 tou rate.png" alt="Con Edison March 2024 Time of Use Rate" /></div>
+								<hr>
+								<h2>
+									Sizing the battery
+								</h2>
+									<p>
+										Originally, my dad wanted to size the battery for the 2-6pm super-peak pricing. The initial idea was to use an Anker 767 with the extended battery up to 4096 Wh. However, when we analyzed the energy usage data downloaded into a spreadsheet, we concluded that it would not be enough. A 10 or 12 kWh battery would be needed to power the summer air conditioning and cooking just in that time frame.
+										<br>
+										It was time to go <b>bigger</b>.
+										<br>
+										We calculated that 75% of the average daily energy use was during the peak hours. The battery would cover a maximum of 16 hours, and would require 25kWh energy.
+									</p>
+								<h2>Selecting the battery</h2>
+									<p>
+										Choosing a Tesla Powerwall or another brand would substantially increase the return on investment due to the high initial cost. Our objective was to find the cheapest dollar per kWh and the right chemistry for longevity.Lead acid was out of the question. It was cheap, but antiquated and does not last more than 5-7 years. 
+										The Anker 767 introduced a new type of battery, the lithium iron phospate LiFePo4. It packed higher energy density than lead acid. It was safe to use, and best of all, would last thousands of discharge and recharge cycles, which can be at least 10 years.
+									</p>
+									<p>
+										My research brought me to Will Prowse's channel, a YouTuber who focuses on DIY off grid solar batteries. His video on an EG4 30kWh battery demonstrated the modularity of server rack batteries. From his analysis, it was the best bang for the buck in terms of the features you get per kWh of storage. Each module's capacity is 5kWh, and when installed in welded server rack, can hold up to 6 modules, equating to 30 kWh. Will explained the safety features, the battery management system (BMS), and the ease of install. To go even cheaper would require to source Prismic LFP cells directly from China and install your own BMS and rack. Which is a lot more work.
+										<br>
+										<video controls="controls" src="https://youtu.be/hYkn9Umb-pA">
+											Your browser does not support the HTML5 Video element.
+										</video>
+
+										<br>My dad loved this idea, and purchased a kit from Signature Solar for six 48V LiFePower4 batteries, the server rack cart, and 2 EG4 6500EX inverters. One inverter can do 6500W output at 120V output, and with a second inverter, can double output or generate 240V for high power appliances. This is an off-grid system, which does not return energy to the grid as that can require permitting with Con Edison. 
+									</p>
+								<hr>
+								<h2>
+									Partial Installation
+								</h2>
+									<p>
+										After the initial shipment of the inverters and batteries, the server rack was disappointingly delayed for over a month.  
+										However it was the beginning of summer, and the super peak pricing was in play.
+										I helped my dad perform the electrical work of installing a subpanel, moving the loads over, and making the wire for the batteries.
+										After wall mounting the inverter, we hooked up 5 modules together on the floor making a 25 kWh battery. 
+									</p>
+								<h2>
+									Installation
+								</h2>
+									<p>
+										Once the 300lb server rack arrived, we disconnected the system and rebuilt it with all 6 module connected. Following the instructions carefully, each electrical bolt was torqued to specification. This rack was installed in a cool basement next to the electrical subpanel, which is an ideal location for the battery.
+									<div class="image main"><img src="images/EG4 30kWh Battery short.jpg" alt="30kWh battery install" /></div>
+									</p>
+								<hr>
+								<h2>
+									Automation
+								</h2>
+									<p>
+										It was absolutely critical to make the automation smart to maximize the ROI. The built in timer on the inverter could not handle the complexity for the features I wanted. 
+										From my research, similar people who installed their own systems used a product called Solar Assistant to manage their inverter remotely. Solar Assistant also integrated with Home Assistant, a home automation operating system I was familiar with.
+									</p>
+								<h3>Network Diagram</h3>
+								<div class="image main"><img src="images/EG4 Automation Diagram v2.png" alt="30kWh battery install" /></div>
+									<p>Solar Assistant (SA) is installed and set up on a Raspberry Pi small board computer. It connects to the inverter over a micro usb cable. Enabling the MQTT server on SA allows it to be integrated with Home Assistant (HA). In the home assistant web interface, I created two automations and a script to optimize the system for time of use rate.
+									</p>
+									<ol>
+										<li>
+										<u>Battery Mode and Charge Current Selector script <br></u>
+										This automation changes the output source priority from grid to battery at 8am. A wifi circuit breaker is disabled to prevent the inverter from drawing power from the grid while on battery. At midnight, the reverse is performed and additionally runs a script to adjust the charge rate based on the battery state of charge (SoC). We do this to slow charge the battery when necessary to reduce heat, and minimize calendar aging where the battery sits fully charged and does nothing.
+										</li>
+										<li>
+										<u>Prevent Peak Charging <br></u>
+										In the event that the battery drains below the minimum SoC set at 10%, this automation enables the wifi circuit breaker and switches to grid power. However, during grid mode, the batteries begin to charge. We don't want this because it is expensive to charge during peak times! Therefore we also set the charge current to 2A, because that is the lowest setting available and essentially "floats" the battery. When midnight comes, automation 1 will charge the battery. 
+										</li>
+									</ol>
+								<hr>
+								<h2> Results</h2>
+									<p>After the system went live, we saw an average 59% decrease on monthly electric bill. This is tracked in a spreadsheet and has been active for the past 9 months. We obtained this number by comparing the rate of a family member who is on the standard rate. After the install of two mini split heat pumps, winter usage was greater than summer and often times depleted battery on the very cold days. Even then, the battery would last to 9-10pm which would equate to about 75% of the load shifted. There was one winter night when the grid went out for a few minutes. Thankfully, we had reserve power and only had to deal with the flicker of the lights and the discord call dropped. We expected a ROI under 7 years, however with increased energy prices, that may come down to 5. The battery is advertised to last 7000 cycles at 80% depth of discharge(DoD), which equates to about 15 years. Of course, we are performing 90% DoD in the winter due to the heat pumps, which will lower the lifespan slightly.  The inverter may last 5-7, and the second inverter is used a spare.
+									</p>
+									<p>
+										If I were to do this project again, I would use their EG4's newer WallMount All Weather batteries which are similar to the Tesla Powerwall, but are also outdoor rated. Newer inverters also contain more features and are electronically improved performance such as output and idle power consumption.
+									</p>
+								<h2>Upgrades</h2>
+										<ul>
+										<li>Wifi Din Circuit breaker - prevents the inverter from using grid power while on battery mode for idle consumption. Idle is 70W and is noticable on super peak pricing.</li>
+										<li>Updated firmware on inverter and batteries.</li>
+										<li>Connected battery to SA for battery stat monitoring. </li>
+										<li>Changed inverter setting from Appliance to UPS mode for faster transition during brownouts.</li>
+										</ul>
+								<h3>FAQ</h3>
+									<p>
+									<ol>
+										<li><b>Why did you not add solar?</b><br>
+										A roof replacement would be needed before a solar installation. However it would be easy to install solar at any time in the future.
+										</li>
+										<li><b>Why 48V instead of 12V or 24V?</b><br>
+										Higher voltage systems have increased efficiency over lower voltage systems and can save on wiring by using thinner wires to achieve the same power.
+										</li>
+										<li><b>Did you have any other problems?</b><br>
+										Due to the nature of the high frequency inverter, several LED lightbulbs had to be upgraded to prevent flickering. Firmware updates should have fixed the issue but it turns out the manufacturer changed a part which may have affected the performance.
+										
+										Also when the battery data cable was connected to the inverter, it would interrupt the monitoring by producing erratic data during charging. Therefore the solution I found was to program the inverter to use a custom battery setting and use a USB to Narada RS485 cable to read the BMS from Solar Assistant.	
+										</li>
+										
+									</ol>
+									</p>
+
+							</section>
+
+					</div>
+
+				<!-- Footer -->
+				<footer id="footer">
+					<section>
+						
+					</section>
+					<section class="split contact">
+						<section class="alt">
+							<h3>Address</h3>
+							<p>Queens, NYC<br />
+							</p>
+						</section>
+						<section>
+							<h3>Email</h3>
+							<p><a href="#">ian.sh.sun@gmail.com</a></p>
+						</section>
+						<section>
+							<h3>Social</h3>
+							<ul class="icons alt">
+								<li><a href="#" class="icon brands alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
+								<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+							</ul>
+						</section>
+					</section>
+				</footer>
+
+			<!-- Copyright -->
+				<div id="copyright">
+					<ul><li>&copy; Ian Sun</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+				</div>
+
+		</div>
+
+	<!-- Scripts -->
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.scrollex.min.js"></script>
+		<script src="assets/js/jquery.scrolly.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+
+</body>
+</html>
